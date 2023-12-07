@@ -83,16 +83,16 @@ public class Example {
 		List<String> names = studentlist.stream()
 				.map(n -> n.name)
 				.collect(Collectors.toList());
-		System.out.println(names);
+		System.out.println("just names: "+names);
 		
 		
 		Map<Integer, List<Student>> grouped = studentlist.stream().
 				collect(Collectors.groupingBy(student -> student.age));
 		
-		System.out.println(grouped);
+		System.out.println("grouped : "+grouped);
 		Map<Integer, Set<Student>> sortedPlusGrouped = studentlist.stream().
 				collect(Collectors.groupingBy(student -> student.age, TreeMap::new, Collectors.toSet()));
 		
-		System.out.println(sortedPlusGrouped);
+		System.out.println("sortedPlusGrouped: "+sortedPlusGrouped);
 	}
 }

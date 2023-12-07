@@ -6,6 +6,10 @@ interface StringFuncs {
 	String func(String n);
 }
 
+interface PrintFuncs {
+	void printAnything();
+}
+
 //This class defines a static method called strReverse().
 class MyStringOps2 {
 	//A static method that reverses a string.
@@ -15,6 +19,10 @@ class MyStringOps2 {
 		for(i = str.length()-1; i >= 0; i--)
 			result += str.charAt(i);
 		return result;
+	}
+	
+	static void printAnything() {
+		System.out.println("another method which is static");
 	}
 }
 
@@ -35,5 +43,9 @@ public class LamdaWithStatic {
 		
 		StringFuncs sf = MyStringOps2::strReverse;
 		System.out.println(sf.func("mohan"));
+		
+		PrintFuncs pf = MyStringOps2::printAnything;
+		System.out.println(" print method called \n");
+		pf.printAnything();
 	}
 }

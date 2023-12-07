@@ -19,7 +19,7 @@ public class AppendAA {
 		//output = {"AustraliaAA","AfricaAA"}
 		
 		List<String> list2 = list.stream().
-				filter((name) -> name != null && name.startsWith("A")).
+				filter((name) -> name != null && name.startsWith("I")).
 				map((name) -> name + "AA").
 				collect(Collectors.toList());
 		
