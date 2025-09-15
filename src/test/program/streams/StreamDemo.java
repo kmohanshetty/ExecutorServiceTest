@@ -21,6 +21,7 @@ public class StreamDemo {
 		// Obtain the minimum and maximum value by use of min(),
 		// max(), isPresent(), and get().
 		Optional<Integer> minVal = myStream.min(Integer::compare);
+		System.out.println("optional: "+minVal);
 		if(minVal.isPresent())
 			System.out.println("Minimum value: " + minVal.get());
 
